@@ -1,2 +1,3 @@
 # react-virtualized-lab
-Lab with react-virtualized
+Sandbox for react-virtualized. 
+It is intended to verify the approach on how to update List component upon props change. 
