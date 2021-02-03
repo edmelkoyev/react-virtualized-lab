@@ -15,8 +15,6 @@ class App extends PureComponent {
   constructor(props){
     super(props)
 
-    this.setPeople = this.setPeople.bind(this)
-
     this.state = {
       people: generateUserList(),
       time: new Date()
@@ -26,19 +24,11 @@ class App extends PureComponent {
     this.ListRef = undefined
   }
 
-  setPeople (people){
-    this.setState({
-      people
-    })
-  }
-
   componentDidMount () {
-
-
     this.pInterval = setInterval(() => {
-      this.setPeople(
-        generateUserList()
-      )
+      this.setState({
+        people: generateUserList()
+      })
     }, 2000)
   }
 
